@@ -1,0 +1,10 @@
+Author: Artem <arti_move@mail.ru>
+Date:   Tue Feb 9 23:33:06 2021 +0300
+
+    add status.txt
+
+commit 59ed3866af1baadd00376d414ec7f0587df8eccd
+Author: Artem <arti_move@mail.ru>
+Date:   Tue Feb 9 23:13:09 2021 +0300
+
+    add .gitignore
