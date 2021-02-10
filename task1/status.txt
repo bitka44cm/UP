@@ -16,3 +16,20 @@ Untracked files:
 	task1/
 
 nothing added to commit but untracked files present (use "git add" to track)
+commit a7da87830723d58a21c5e752d90ea372b78aecd6 (HEAD -> master, origin/master, origin/HEAD)
+Author: Artem <arti_move@mail.ru>
+Date:   Tue Feb 9 23:40:14 2021 +0300
+
+    add log.txt
+
+commit 7edbd3e6c2a3afbabb10c8ba2d931827cff65936
+Author: Artem <arti_move@mail.ru>
+Date:   Tue Feb 9 23:33:06 2021 +0300
+
+    add status.txt
+
+commit 59ed3866af1baadd00376d414ec7f0587df8eccd
+Author: Artem <arti_move@mail.ru>
+Date:   Tue Feb 9 23:13:09 2021 +0300
+
+    add .gitignore
