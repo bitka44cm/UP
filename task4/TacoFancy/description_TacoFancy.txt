@@ -1,0 +1,8 @@
+1) get_all_of_Sinker
+to get all of Dan Sinker’s contributions.
+
+2) get_contributor_for_the_Delengua
+to get the contributors for the Delengua (Beef Tounge) Base Layer.
+
+3) get_random_taco
+get a random Base Layer, Mixin, Condiment, Seasoning and Shell.
