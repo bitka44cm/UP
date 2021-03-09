@@ -1,0 +1,9 @@
+1) get_proPlayers
+We get list of pro players Dota 2 with their personal information.
+
+2) get_heroes
+We get list of all heroes of Dota 2 with their stats.
+
+3) get_player(id)_wl
+We get stats: number of wins or loses games. And I added 2 parameters:
+hero_id : 4 and is_radiant : 1. There are let us to get information about WL on Bloodseeker(we can see it on screenshot heroes) for the radiant team.

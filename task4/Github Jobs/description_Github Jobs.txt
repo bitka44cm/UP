@@ -1,0 +1,10 @@
+1) get_jobs_lat+long
+We get list of jobs with parameters lat and long, where:
+lat — A specific latitude.
+long — A specific longitude.
+
+2) get_jobs_search
+We get list of jobs with parameter search, that finds text in job_offers.
+
+3) get_jobs_description+page
+We get list of jobs from first page and with word(ruby) in description
