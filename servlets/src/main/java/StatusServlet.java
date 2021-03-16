@@ -2,13 +2,13 @@ import java.io.*;
 import javax.servlet.http.*;
 
 public class StatusServlet extends HttpServlet {
+    private static final String  MESSAGE = "Application Is Running";
 
 @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
-        String message = "Application Is Running";
 
         PrintWriter out = response.getWriter();
-        out.println("<h1>" + message + "</h1>");
+        out.println("<h1>" + MESSAGE + "</h1>");
     }
 }
