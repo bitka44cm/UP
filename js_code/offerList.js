@@ -385,7 +385,7 @@ function validateAd(adItem){
                 }
                 break;
             default:
-                console.log('что-то пошло не так :(');
+                console.log('Something went wrong :(');
                 return false;
         }
     }
