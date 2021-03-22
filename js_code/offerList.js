@@ -319,7 +319,6 @@ function validateAd(adItem){
     let parameters = ['id', 'description',  'createdAt', 'link', 'vendor', 'photoLink', 'validUntil', 'discount', 'hashtags'];
     for(let i = 0; i < parameters.length; i++){
         if(adItem[parameters[i]] == undefined){
-            console.log('pososi');
             return false;
         }
     }
@@ -328,71 +327,60 @@ function validateAd(adItem){
         switch (param){
             case 'id':
                 if(typeof adItem.id !== 'string' || adItem.id.length === 0){
-                    console.log('pososi2');
                     return false;
                 }
                 break;
             case 'description':
                 if(typeof adItem.description !== 'string' || adItem.description.length >= 200 || adItem.description.length === 0){
-                    console.log('pososi3');
                     return false;
                 }
                 break;
             case 'createdAt':
                 if(Object.prototype.toString.call(adItem.createdAt) !== '[object Date]'){
-                    console.log('pososi4');
                     return false;
                 }
                 break;
             case 'link':
                 if(typeof adItem.link !== 'string' || adItem.link.length === 0){
-                    console.log('pososi5');
                     return false;
                 }
                 break;
             case 'vendor':
                 if(typeof adItem.vendor !== 'string' || adItem.vendor.length === 0){
-                    console.log('pososi6');
                     return false;
                 }
                 break;
             case 'hashtags':
                 if (adItem.hashtags){
                     if (!adItem.hashtags.every(item => typeof item === 'string')){
-                        console.log('pososi7');
                         return false;
                     }
                 }
                 break;
             case 'validUntil':
                 if(Object.prototype.toString.call(adItem.validUntil) !== '[object Date]'){
-                    console.log('pososi8');
                     return false;
                 }
                 break;
             case 'photoLink':
                 if(typeof adItem.photoLink !== 'string' || adItem.photoLink.length === 0){
-                    console.log('pososi9');
                     return false;
                 }
                 break;
             case 'discount':
                 if(typeof adItem.discount !== 'string' || adItem.discount.length === 0){
-                    console.log('pososi10');
                     return false;
                 }
                 break;
             case 'reviews':
                 if (adItem.reviews){
                     if (!adItem.reviews.every(item => typeof item === 'string')){
-                        console.log('pososi11');
                         return false;
                     }
                 }
                 break;
             case 'rating':
                 if(typeof adItem.rating !== 'number' || adItem.rating.length === 0){
-                    console.log('pososi12');
                     return false;
                 }
                 break;
