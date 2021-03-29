@@ -1,0 +1,16 @@
+{
+  "name": "eslint.json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jsClass.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.23.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
