@@ -134,9 +134,16 @@ class AdList {
     }
 
     add(adItem){
+        
         if(AdList.validate(adItem)){
-            this._adList.push(adItem);
-            return true;
+            if (this._adList.filter(offer => offer['id'] === adItem['id']).length === 0){
+                this._adList.push(adItem);
+                return true;
+            }
+            else{
+                console.log('this offer can\'t added, because your collection containes offer with this id');
+                return false;
+            }
         }
         else{
             console.log('offer isn\'t validated');
@@ -595,6 +602,21 @@ console.log(offers.addAll([
 console.log('return added offers');
 console.log(offers.get('24'));
 console.log(offers.get('25'));
+
+console.log('try to add offer with id = 25');
+console.log(offers.add({
+    id: '25',
+    description : 'Компьютеры со скидкой 70%',
+    createdAt : new Date('2021-06-26T21:12:11'),
+    link : 'https://PC.pl',
+    vendor : 'TV - best',
+    photoLink : 'https://lh3.googleusercontent.com/proxy/n4y3C7gnmGV4SOVmkE2DoLGua_DNkt9Nyrnth8-gXnbO_xFewvtRi3ztskcGA4G1mwE45gvXpq_1rWX1VYLXJbh9jJGUc3x0E6exe2T9F1LLN5ZgL4d8KZy4SoaGo9IlVQGFY6mDTznWSptH9XZIf-lK',
+    hashtags : ['PC', 'CS', 's1mple', 'MacBook Pro', 'DELL'],
+    discount : '70',
+    validUntil : new Date('2022-01-21T20:12:32'),
+    rating : 4.2,
+    reviews : ['Xbox is better!']
+}));
 
 console.log('clear collection')
 offers.clear();
