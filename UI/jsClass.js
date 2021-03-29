@@ -44,15 +44,7 @@ class AdList {
         return returningAdsList.slice(skip, skip + top);
 
         function comparator(first, second) {
-            if (first.createdAt < second.createdAt){
-                return 1;
-            }
-            else if (first.createdAt > second.createdAt){
-                return -1;
-            }
-            else{
-                return 0;
-            }
+            return second.createdAt - first.createdAt;
         }
     }
 
@@ -134,7 +126,6 @@ class AdList {
     }
 
     add(adItem){
-        
         if(AdList.validate(adItem)){
             if (this._adList.filter(offer => offer['id'] === adItem['id']).length === 0){
                 this._adList.push(adItem);
@@ -200,6 +191,7 @@ class AdList {
 }
 
 //test
+
 let offers = new AdList(
     [
         {
@@ -465,6 +457,7 @@ let offers = new AdList(
         }
     ]
 )
+
 console.log('get offer by id = 1');
 console.log(offers.get('1'));
 
