@@ -457,7 +457,6 @@ let offers = new AdList(
         }
     ]
 )
-
 console.log('get offer by id = 1');
 console.log(offers.get('1'));
 
