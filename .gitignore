@@ -3,3 +3,5 @@
 .idea/
 out/
 /servlets/target/
+UI/node_modules
+Bali/target/
