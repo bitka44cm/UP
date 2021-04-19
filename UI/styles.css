@@ -184,6 +184,7 @@ body {
 }
 .right_content {
     display: flex;
+    width: 80%;
 }
 
 @media screen and (max-width: 575px) {
@@ -241,6 +242,7 @@ body {
     margin: .5rem;
     font-size: 14px;
     line-height: 1;
+    width: 100%;
 }
 
 @media screen and (max-width: 575px) {
@@ -255,8 +257,8 @@ body {
     padding: .125rem;
     height: 100%;
     margin-left: .5rem;
-
     margin-right: .5rem;
+    width: 100%;
 }
 
 .optional {
