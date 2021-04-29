@@ -551,7 +551,7 @@ link_to_website:hover {
     border: 1px solid antiquewhite;
     border-radius: 1rem;
     z-index: 150;
-    display: block;
+    display: none;
     position: fixed;
     left: 0;
     right: 0;
@@ -589,6 +589,6 @@ link_to_website:hover {
     right: 0;
     top: 0;
     bottom: 0;
-    display: block;
+    display: none;
     z-index: 100;
 }
