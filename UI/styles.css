@@ -61,6 +61,7 @@ body {
     text-transform: uppercase;
     font-size: 2rem;
     text-decoration: none;
+    cursor: pointer;
 }
 .logo:hover{
     color: #322be3;
@@ -298,6 +299,10 @@ link_to_website:hover {
     align-items: center;
 }
 
+.icon {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 575px) {
     .icons {
         flex-direction: row;
@@ -333,6 +338,10 @@ link_to_website:hover {
     padding: .5rem;
     min-width: 25rem;
     flex: 1;
+}
+
+.checkbox_cursor{
+    cursor: pointer;
 }
 
 .buttonAdd_newOffer {
@@ -470,6 +479,7 @@ link_to_website:hover {
 .sign_in_button {
     width: 100%;
     height: 3rem;
+    cursor: pointer;
 }
 
 /* Add offer */
@@ -540,6 +550,7 @@ link_to_website:hover {
 .add_offer_button {
     height: 2rem;
     width: 8rem;
+    cursor: pointer;
 }
 
 /* Comment_Window */
