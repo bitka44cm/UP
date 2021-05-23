@@ -3,4 +3,7 @@
 .idea/
 out/
 /servlets/target/
+UI/node_modules
+Bali/target/
+UI/.vscode/
 /UI/node_modules
