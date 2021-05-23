@@ -4,3 +4,5 @@
 out/
 /servlets/target/
 /UI/node_modules
+UI/.vscode/
+Bali/
