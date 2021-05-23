@@ -213,7 +213,6 @@ class View {
     showStatus(){
         if(this._username === null || this._username.length === 0) {
             document.querySelector('.Sign_in').textContent = 'Log in';
-            //document.getElementsByName('door')[0].style.visibility = 'hidden';
             document.querySelector('.door').style.visibility = 'hidden';
         }
         else{
@@ -239,7 +238,7 @@ class View {
         });
         newOffer.querySelector('.link_to_website').textContent = offer.link;
         newOffer.querySelector('.link_to_website').setAttribute('href', offer.link);
-        newOffer.querySelector('.rating').textContent = offer.rating + ' / 5 reting';
+        newOffer.querySelector('.rating').textContent = offer.rating + ' / 5 rating';
         if(this._username === null || this._username.length === 0){
             newOffer.querySelector('.icons').style.visibility = 'hidden';
         }
