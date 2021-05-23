@@ -13,9 +13,9 @@ public class OfferList {
         offers = new ArrayList<>();
     }
 
-    public Offer getOffer(String id){
-        for(Offer offer : offers){
-            if(offer.getId().equals(id)){
+    public Offer getOffer(String id) {
+        for(Offer offer : offers) {
+            if (offer.getId().equals(id)) {
                 return offer;
             }
         }
@@ -23,13 +23,14 @@ public class OfferList {
         return null;
     }
 
-    public static boolean validateOffer(Offer offer){
-        if(offer.getId() != null && offer.getId().length() != 0 &&
+    public static boolean validateOffer(Offer offer) {
+        final int MAX_COUNT_HASHTAGS = 7;
+        if (offer.getId() != null && offer.getId().length() != 0 &&
         offer.getDescription() != null && offer.getDescription().length() != 0 &&
         offer.getCreatedAt() != null && offer.getCreatedAt().length() != 0 &&
         offer.getLink() != null && offer.getLink().length() != 0 &&
         offer.getVendor() != null && offer.getVendor().length() != 0 &&
-        offer.getHashTags() != null && offer.getHashTags().size() != 0 && offer.getHashTags().size() <= 7 &&
+        offer.getHashTags() != null && offer.getHashTags().size() != 0 && offer.getHashTags().size() <= MAX_COUNT_HASHTAGS &&
         offer.getValidUntil() != null && offer.getValidUntil().length() != 0 &&
         offer.getPhotoLink() != null && offer.getPhotoLink().length() != 0 &&
         offer.getDiscount() != null && offer.getDiscount().length() != 0 &&
@@ -39,62 +40,62 @@ public class OfferList {
         return false;
     }
 
-    public boolean addOffer(Offer offer){
-        if(OfferList.validateOffer(offer) && getOffer(offer.getId()) == null){
+    public boolean addOffer(Offer offer) {
+        if (OfferList.validateOffer(offer) && getOffer(offer.getId()) == null) {
             offers.add(offer);
             return true;
         }
         return false;
     }
 
-    public boolean editOffer(String id, Offer offer){
-        if(offer.getId() != null || offer.getVendor() != null || offer.getCreatedAt() != null){
+    public boolean editOffer(String id, Offer offer) {
+        if (offer.getId() != null || offer.getVendor() != null || offer.getCreatedAt() != null) {
             return false;
         }
         Offer newOffer = getOffer(id);
-        if(offer.getDescription() != null){
+        if (offer.getDescription() != null) {
             newOffer.setDescription(offer.getDescription());
         }
-        if(offer.getLink() != null){
+        if (offer.getLink() != null) {
             newOffer.setLink(offer.getLink());
         }
-        if(offer.getHashTags() != null){
+        if (offer.getHashTags() != null) {
             newOffer.setHashTags(offer.getHashTags());
         }
-        if(offer.getValidUntil() != null){
+        if (offer.getValidUntil() != null) {
             newOffer.setValidUntil(offer.getValidUntil());
         }
-        if(offer.getPhotoLink() != null){
+        if (offer.getPhotoLink() != null) {
             newOffer.setPhotoLink(offer.getPhotoLink());
         }
-        if(offer.getDiscount() != null){
+        if (offer.getDiscount() != null) {
             newOffer.setDiscount(offer.getDiscount());
         }
-        if(offer.getReviews() != null){
+        if (offer.getReviews() != null) {
             newOffer.setReviews(offer.getReviews());
         }
-        if(offer.getRating() != 0){
+        if (offer.getRating() != 0) {
             newOffer.setRating(offer.getRating());
         }
         return true;
     }
 
-    public boolean removeOffer(String id){
-        if(getOffer(id) != null){
+    public boolean removeOffer(String id) {
+        if (getOffer(id) != null) {
             offers.remove(getOffer(id));
             return true;
         }
         return false;
     }
 
-    public List<Offer> getPage(int skip, int top, OfferFilter offerFilter){
+    public List<Offer> getPage(int skip, int top, OfferFilter offerFilter) {
         List<Offer> bufOfferList = new ArrayList<>();
-        if(skip >= offers.size()){
+        if (skip >= offers.size()) {
             return null;
         }
         int amountOffers = offers.size();
-        for(int i = skip; i < amountOffers && top > 0; i++){
-            if(offers.get(i).getVendor().equals(offerFilter.getVendor()) ||
+        for (int i = skip; i < amountOffers && top > 0; i++) {
+            if (offers.get(i).getVendor().equals(offerFilter.getVendor()) ||
                     offers.get(i).getValidUntil().equals(offerFilter.getValidUntil()) ||
                     offers.get(i).getHashTags().containsAll(offerFilter.getHashTags())) {
                 bufOfferList.add(offers.get(i));

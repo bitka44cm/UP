@@ -1,9 +1,9 @@
 import java.util.List;
 
 public class OfferFilter {
-    private String vendor;
-    private String validUntil;
-    private List<String> hashTags;
+    private final String vendor;
+    private final String validUntil;
+    private final List<String> hashTags;
 
     public OfferFilter(String vendor, String validUntil, List<String> hashTags){
         this.vendor = vendor;
